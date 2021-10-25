@@ -12,7 +12,5 @@ This repository contains the stereo+LiDAR implementation of DSP-SLAM. More infor
 
 * [DSP-SLAM: Object Oriented SLAM with Deep Shape Priors](https://arxiv.org/abs/2108.09481), Jingwen Wang, [Martin Rünz](https://www.martinruenz.de/), [Lourdes Agapito](http://www0.cs.ucl.ac.uk/staff/L.Agapito/), 3DV '21
 
-## Building DSP-SLAM
-
 ## Acknowledgements
 Research presented here has been supported by the UCL Centre for Doctoral Training in Foundational AI under UKRI grant number EP/S021566/1. We thank [Wonbong Jang](https://sites.google.com/view/wbjang/home) and Adam Sherwood for fruitful discussions.
