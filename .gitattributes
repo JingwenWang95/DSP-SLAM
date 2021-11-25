@@ -1,0 +1,11 @@
+pybind11/** linguist-vendored
+Thirdparty/bashcolors/** linguist-vendored=false
+Thirdparty/g2o/** linguist-vendored=true
+Thirdparty/DBoW2/** linguist-vendored=true
+LICENSE -linguist-vendored=true
+LICENSE-DSP-SLAM.txt -linguist-vendored=true
+*.sh linguist-detectable=true
+*.json linguist-detectable=false
+*.yaml linguist-detectable=false
+*.yml linguist-detectable=false
+*.md linguist-detectable=false

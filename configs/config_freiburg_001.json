@@ -1,0 +1,36 @@
+{
+  "data_type": "Freiburg",
+  "detect_online": true,
+  "path_label_2d": "/media/jingwen/Data/freiburg_cars/freiburg_static_car_vids/Cars/Car001/detections/labels",
+  "Detector2D": {
+    "config_path": "configs/config_maskrcnn.py",
+    "weight_path": "weights/maskrcnn/model.pth"
+  },
+  "slam_config_path": "configs/freiburg_001.yaml",
+  "min_bb_area": 1600,
+  "min_mask_area": 1000,
+  "downsample_ratio": 4.0,
+  "DeepSDF_DIR": "weights/deepsdf/cars_64",
+  "voxels_dim": 64,
+  "optimizer": {
+    "code_len": 64,
+    "num_depth_samples": 50,
+    "cut_off_threshold": 0.01,
+    "joint_optim": {
+      "k1": 1.0,
+      "k2": 100.0,
+      "k3": 0.5,
+      "k4": 0.0,
+      "b1": 0.20,
+      "b2": 0.025,
+      "num_iterations": 5,
+      "learning_rate": 1.0,
+      "scale_damping": 100.0
+    }
+  },
+  "viewer": {
+    "distance": 10,
+    "tilt": 30,
+    "frame_size": 0.5
+  }
+}
