@@ -1,5 +1,0 @@
-DSP-SLAM includes the third-party open-source software ORB-SLAM2, which itself includes third-party open-source software. Each of these components have their own license.
-Please see Dependencies.md for a list of all included code and library dependencies which are not property of the authors of DSP-SLAM.
-
-DSP-SLAM is released under a GPLv3 license (see LICENSE) in line with ORB-SLAM2. More details could be found at https://github.com/raulmur/ORB_SLAM2
-DSP-SLAM also takes a part of code from DeepSDF which is under MIT license:  https://github.com/facebookresearch/DeepSDF
