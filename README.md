@@ -172,7 +172,7 @@ If you want to create your own labels with your own detectors, you can follow th
 If you have problem installing mmdetection3d but can run mmdetection smoothly, then you can start with mono sequences as they only require 2D detector.
 
 # 4. License
-DSP-SLAM includes the third-party open-source software ORB-SLAM2, which itself includes third-party open-source software. Each of these components have their own license.
+DSP-SLAM includes the third-party open-source software ORB-SLAM2, which itself includes third-party open-source software. Each of these components have their own license. DSP-SLAM also takes a part of code from DeepSDF which is under MIT license: https://github.com/facebookresearch/DeepSDF.
 
 DSP-SLAM is released under [GPLv3 license](LICENSE) in line with ORB-SLAM2. For a list of all code/library dependencies (and associated licenses), please see [Dependencies.md](Dependencies.md).
 
