@@ -14,7 +14,7 @@ If you find our work useful, please consider citing our paper:
 ```
 @inproceedings{wang2021dspslam,
   author={Jingwen Wang and Martin Rünz and Lourdes Agapito},
-  booktitle={Proceedings of the International Conference on {3D} Vision (3DV)},
+  booktitle={2021 IEEE International Conference on 3D Vision (3DV)},
   title={DSP-SLAM: Object Oriented SLAM with Deep Shape Priors},
   year={2021}
 }
