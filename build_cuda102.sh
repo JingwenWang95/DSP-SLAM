@@ -49,6 +49,7 @@ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 8
 sudo apt-get install -y cmake
 sudo apt-get install -y \
   libglew-dev \
+  libgtk2.0-dev \
   pkg-config \
   libegl1-mesa-dev \
   libwayland-dev \
