@@ -46,6 +46,7 @@ sudo apt-get update > /dev/null 2>&1 &&
 sudo apt -y install gcc-8 g++-8 # gcc-8 is a safe version 
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 8
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 8
+sudo apt-get install -y cmake
 sudo apt-get install -y \
   libglew-dev \
   pkg-config \

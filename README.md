@@ -14,9 +14,11 @@ If you find our work useful, please consider citing our paper:
 ```
 @inproceedings{wang2021dspslam,
   author={Jingwen Wang and Martin Rünz and Lourdes Agapito},
-  booktitle={2021 IEEE International Conference on 3D Vision (3DV)},
+  booktitle={2021 International Conference on 3D Vision (3DV)},
   title={DSP-SLAM: Object Oriented SLAM with Deep Shape Priors},
+  pages={1362--1371}
   year={2021}
+  organization={IEEE}
 }
 ```
 
@@ -166,7 +168,7 @@ If you can successfully build DSP-SLAM but get errors from Python side when runn
 ### Label format
 If you want to create your own labels with your own detectors, you can follow the same format as the labels we provided in the KITTI-07 sequence.
 * 3D labels contains 3D detection boxes under [KITTI](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d) convention. Each `.lbl` file consits of a numpy array of size Nx7, where N is the number of objects detected. Each row of the array is a 3D detection box: [x, y, z, w, l, h, ry]. More information about the KITTI coordinate system can be found from [mmdetection3d](https://github.com/open-mmlab/mmdetection3d) or [KITTI website](http://www.cvlibs.net/publications/Geiger2013IJRR.pdf).
-* 2D labels contains MaskRCNN detection boxes and segmentation masks. Each `.lbl` file consists of of a dictionary with two keys: `pred_boxes` and `pred_maskes`. Boxes and masks are stored as numpy array of size Nx4 and NxHxW.
+* 2D labels contains MaskRCNN detection boxes and segmentation masks. Each `.lbl` file consists of of a dictionary with two keys: `pred_boxes` and `pred_masks`. Boxes and masks are stored as numpy array of size Nx4 and NxHxW.
 
 ### Run DSP-SLAM with mono sequence
 If you have problem installing mmdetection3d but can run mmdetection smoothly, then you can start with mono sequences as they only require 2D detector.
