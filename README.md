@@ -1,5 +1,5 @@
 # DSP-SLAM
-### [Project Page](https://jingwenwang95.github.io/dsp-slam/) | [Video](https://youtu.be/spNJlU982L4) | [Paper](https://arxiv.org/abs/2108.09481)
+### [Project Page](https://jingwenwang95.github.io/dsp-slam/) | [Video](https://youtu.be/of4ANH24LP4) | [Paper](https://arxiv.org/abs/2108.09481)
 This repository contains code for DSP-SLAM, an object-oriented SLAM system that builds a rich and accurate joint map of dense 3D models for foreground objects, and sparse landmark points to represent the background. DSP-SLAM takes as input the 3D point cloud reconstructed by a feature-based SLAM system and equips it with the ability to enhance its sparse map with dense reconstructions of detected objects. Objects are detected via semantic instance segmentation, and their shape and pose are estimated using category-specific deep shape embeddings as priors, via a novel second order optimization.  Our object-aware bundle adjustment builds a pose-graph to jointly optimize camera poses, object locations and feature points. DSP-SLAM can operate at 10 frames per second on 3 different input modalities: monocular, stereo, or stereo+LiDAR.
 
 More information and the paper can be found at our [project page](https://jingwenwang95.github.io/dsp-slam/).
@@ -172,6 +172,9 @@ If you want to create your own labels with your own detectors, you can follow th
 
 ### Run DSP-SLAM with mono sequence
 If you have problem installing mmdetection3d but can run mmdetection smoothly, then you can start with mono sequences as they only require 2D detector.
+
+### Resolve '***GLSL Shader compilation error: GLSL 3.30 is not supported***'
+We render the reconstructed objects using GLSL, the error above won't affect the SLAM system running but you won't see objects show up in the window. You can try running ```export MESA_GL_VERSION_OVERRIDE=3.3``` before running DSP-SLAM. More info: https://stackoverflow.com/questions/52592309/0110-error-glsl-3-30-is-not-supported-ubuntu-18-04-c
 
 # 4. License
 DSP-SLAM includes the third-party open-source software ORB-SLAM2, which itself includes third-party open-source software. Each of these components have their own license. DSP-SLAM also takes a part of code from DeepSDF which is under MIT license: https://github.com/facebookresearch/DeepSDF.
