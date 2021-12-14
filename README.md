@@ -1,5 +1,5 @@
 # DSP-SLAM
-### [Project Page](https://jingwenwang95.github.io/dsp-slam/) | [Video](https://youtu.be/of4ANH24LP4) | [Paper](https://arxiv.org/abs/2108.09481)
+### [Project Page](https://jingwenwang95.github.io/dsp-slam/) | [Video](https://youtu.be/of4ANH24LP4) | [Video (Bilibili)](https://www.bilibili.com/video/BV1yf4y1H7ib/) | [Paper](https://arxiv.org/abs/2108.09481)
 This repository contains code for DSP-SLAM, an object-oriented SLAM system that builds a rich and accurate joint map of dense 3D models for foreground objects, and sparse landmark points to represent the background. DSP-SLAM takes as input the 3D point cloud reconstructed by a feature-based SLAM system and equips it with the ability to enhance its sparse map with dense reconstructions of detected objects. Objects are detected via semantic instance segmentation, and their shape and pose are estimated using category-specific deep shape embeddings as priors, via a novel second order optimization.  Our object-aware bundle adjustment builds a pose-graph to jointly optimize camera poses, object locations and feature points. DSP-SLAM can operate at 10 frames per second on 3 different input modalities: monocular, stereo, or stereo+LiDAR.
 
 More information and the paper can be found at our [project page](https://jingwenwang95.github.io/dsp-slam/).
@@ -173,13 +173,20 @@ If you want to create your own labels with your own detectors, you can follow th
 ### Run DSP-SLAM with mono sequence
 If you have problem installing mmdetection3d but can run mmdetection smoothly, then you can start with mono sequences as they only require 2D detector.
 
-### Resolve '***GLSL Shader compilation error: GLSL 3.30 is not supported***'
-We render the reconstructed objects using GLSL, the error above won't affect the SLAM system running but you won't see objects show up in the window. You can try running ```export MESA_GL_VERSION_OVERRIDE=3.3``` before running DSP-SLAM. More info: https://stackoverflow.com/questions/52592309/0110-error-glsl-3-30-is-not-supported-ubuntu-18-04-c
-
 # 4. License
 DSP-SLAM includes the third-party open-source software ORB-SLAM2, which itself includes third-party open-source software. Each of these components have their own license. DSP-SLAM also takes a part of code from DeepSDF which is under MIT license: https://github.com/facebookresearch/DeepSDF.
 
 DSP-SLAM is released under [GPLv3 license](LICENSE) in line with ORB-SLAM2. For a list of all code/library dependencies (and associated licenses), please see [Dependencies.md](Dependencies.md).
 
-# 5. Acknowledgements
+# 5. FAQ
+
+### Resolve '***Segmentation Fault***'
+First make sure you have activated the correct environment which is `dsp-slam` and run DSP-SLAM under the project root directory. See if that can resolve the SegFault.
+
+Another major cause of SegFault is caused by mmdetection3d. If you encounter SegFault on KITTI sequence but can successfully run `dsp_slam_mono` on Freiburg Cars or Redwood Chairs, then the problem is probably because mmdetection3d is not correctly installed. Make sure you fully understand the steps in the building scripts and followed all the steps correctly.
+
+### Resolve '***GLSL Shader compilation error: GLSL 3.30 is not supported***'
+We render the reconstructed objects using GLSL, the error above won't affect the SLAM system running but you won't see objects show up in the window. You can try running ```export MESA_GL_VERSION_OVERRIDE=3.3``` before running DSP-SLAM. More info: https://stackoverflow.com/questions/52592309/0110-error-glsl-3-30-is-not-supported-ubuntu-18-04-c
+
+# 6. Acknowledgements
 Research presented here has been supported by the UCL Centre for Doctoral Training in Foundational AI under UKRI grant number EP/S021566/1. We thank [Wonbong Jang](https://sites.google.com/view/wbjang/home) and Adam Sherwood for fruitful discussions. We are also grateful to [Binbin Xu](https://www.doc.ic.ac.uk/~bx516/) and [Xin Kong](https://kxhit.github.io/) for their patient code testing!
