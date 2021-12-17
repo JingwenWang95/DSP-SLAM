@@ -185,6 +185,9 @@ First make sure you have activated the correct environment which is `dsp-slam` a
 
 Another major cause of SegFault is caused by mmdetection3d. If you encounter SegFault on KITTI sequence but can successfully run `dsp_slam_mono` on Freiburg Cars or Redwood Chairs, then the problem is probably because mmdetection3d is not correctly installed. Make sure you fully understand the steps in the building scripts and followed all the steps correctly.
 
+### Resolve '***ValueError: numpy.ndarray size changed, may indicate binary incompatibility***'
+This error is caused by numpy version mismatch between mmdetection3d and pycocotools. This can be resolved by upgrade numpy version to >= 1.20.0. More info can befound from here: https://stackoverflow.com/questions/66060487/valueerror-numpy-ndarray-size-changed-may-indicate-binary-incompatibility-exp
+
 ### Resolve '***GLSL Shader compilation error: GLSL 3.30 is not supported***'
 We render the reconstructed objects using GLSL, the error above won't affect the SLAM system running but you won't see objects show up in the window. You can try running ```export MESA_GL_VERSION_OVERRIDE=3.3``` before running DSP-SLAM. More info: https://stackoverflow.com/questions/52592309/0110-error-glsl-3-30-is-not-supported-ubuntu-18-04-c
 
