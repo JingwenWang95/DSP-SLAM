@@ -185,6 +185,12 @@ First make sure you have activated the correct environment which is `dsp-slam` a
 
 Another major cause of SegFault is caused by mmdetection3d. If you encounter SegFault on KITTI sequence but can successfully run `dsp_slam_mono` on Freiburg Cars or Redwood Chairs, then the problem is probably because mmdetection3d is not correctly installed. Make sure you fully understand the steps in the building scripts and followed all the steps correctly.
 
+### No response after running
+Make sure you specified correct data path when running DSP-SLAM. 
+
+### Resolve '***The experiment directory does not include specifications file "specs.json"***'
+This error suggests that you provided wrong path for DeepSDF weights. All the [json config files](https://github.com/JingwenWang95/DSP-SLAM/blob/master/configs/config_kitti.json#L19) under `configs/` assume that weights are under stored `weights/`. Make sure you download the weights and put them under `weights/` or change the weight path in the json config files.
+
 ### Resolve '***ValueError: numpy.ndarray size changed, may indicate binary incompatibility***'
 This error is caused by numpy version mismatch between mmdetection3d and pycocotools. This can be resolved by upgrade numpy version to >= 1.20.0. More info can befound from here: https://stackoverflow.com/questions/66060487/valueerror-numpy-ndarray-size-changed-may-indicate-binary-incompatibility-exp
 
