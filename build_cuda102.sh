@@ -174,11 +174,11 @@ conda activate dsp-slam
 
 highlight "Installing mmdetection and mmdetection3d ..."
 pip install pycocotools==2.0.1
-pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu102/torch1.10.0/index.html
+pip install mmcv-full==1.4.0 -f https://download.openmmlab.com/mmcv/dist/cu102/torch1.10.0/index.html
 pip install mmdet==2.14.0
 pip install mmsegmentation==0.14.1
 cd Thirdparty
-git_clone "git clone https://github.com/open-mmlab/mmdetection3d.git"
+git_clone "git clone https://github.com/JingwenWang95/mmdetection3d.git"
 cd mmdetection3d
 pip install -v -e .
 cd ../..
