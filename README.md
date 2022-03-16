@@ -22,6 +22,9 @@ If you find our work useful, please consider citing our paper:
 }
 ```
 
+## Important Updates
+**[16 Mar 2022]**: Due to some major changes in mmdetection3d, some components (such as detector weights) in this project no longer works with the latest mmdetection3d. I have updated the building scripts so that everything follows exactly the same setting as when this project was released.
+
 # 1. Prerequisites
 We have conducted most experiments and testings in Ubuntu 18.04 and 20.04, but it should also be possible to compile in other versions. You also need a powerful GPU to run DSP-SLAM, we have tested with RTX-2080 and RTX-3080. 
 
